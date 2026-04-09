@@ -60,13 +60,13 @@ const Profile = () => {
             <div className="relative">
                 <div className="flex items-center gap-3 mb-4">
                     <div className="w-2 h-2 rounded-full bg-indigo-500 shadow-[0_0_10px_rgba(99,102,241,0.8)]" />
-                    <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/40">Repository Management</span>
+                    <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/40">Account Management</span>
                 </div>
                 <h1 className="text-5xl font-light tracking-tighter text-white mb-4">
                     MY <span className="font-black">COLLECTION</span>
                 </h1>
                 <p className="text-white/30 text-sm font-medium tracking-wide">
-                    Authorized access to <span className="text-white font-bold">{myResources.length}</span> published neural nodes
+                    Access to <span className="text-white font-bold">{myResources.length}</span> published resource
                 </p>
             </div>
         </div>
@@ -86,9 +86,7 @@ const Profile = () => {
                         {/* Card Content Area */}
                         <div className="p-8 flex-1 cursor-pointer" onClick={() => navigate(`/resource/${res._id}`)}>
                             <div className="flex justify-between items-start mb-6">
-                                <span className="text-[9px] font-bold uppercase tracking-widest text-indigo-400 bg-indigo-400/10 px-3 py-1 rounded-full border border-indigo-400/20">
-                                    Document Node
-                                </span>
+
                                 <svg className="w-5 h-5 text-white/20 group-hover:text-white/40 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                                 </svg>
@@ -117,13 +115,13 @@ const Profile = () => {
                                 onClick={() => navigate(`/resource/${res._id}`)}
                                 className="flex-1 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-white/40 hover:text-white hover:bg-white/5 transition-all border-r border-white/5"
                             >
-                                View Entry
+                                View Details
                             </button>
                             <button
                                 onClick={() => handleDelete(res._id)}
                                 className="px-8 py-4 text-[10px] font-bold uppercase tracking-[0.2em] text-red-500/50 hover:text-red-400 hover:bg-red-500/10 transition-all"
                             >
-                                Terminate
+                                Delete
                             </button>
                         </div>
                     </div>

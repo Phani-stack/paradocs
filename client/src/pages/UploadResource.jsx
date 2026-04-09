@@ -59,7 +59,7 @@ const UploadResource = () => {
                 SHARE <span className="font-black">RESOURCE</span>
             </h2>
             <p className="text-white/30 text-center mt-4 text-sm font-medium tracking-wide">
-                Assign a new intelligence node to the global archive.
+                Share you're knowledge
             </p>
         </div>
 
@@ -68,7 +68,7 @@ const UploadResource = () => {
                 {/* Title Input */}
                 <div className="space-y-2 group">
                     <label className="text-[10px] font-bold text-white/20 uppercase tracking-[0.2em] ml-1 transition-colors group-focus-within:text-indigo-400">
-                        Document Identity
+                        Resource name
                     </label>
                     <input
                         type="text"
@@ -83,7 +83,7 @@ const UploadResource = () => {
                 {/* Tags Input */}
                 <div className="space-y-2 group">
                     <label className="text-[10px] font-bold text-white/20 uppercase tracking-[0.2em] ml-1 transition-colors group-focus-within:text-indigo-400">
-                        Semantic Tags
+                        Tags
                     </label>
                     <input
                         type="text"
@@ -98,7 +98,7 @@ const UploadResource = () => {
             {/* Description Textarea */}
             <div className="space-y-2 group">
                 <label className="text-[10px] font-bold text-white/20 uppercase tracking-[0.2em] ml-1 transition-colors group-focus-within:text-indigo-400">
-                    Abstract / Summary
+                    Description / Summary
                 </label>
                 <textarea
                     name="description"
@@ -113,7 +113,7 @@ const UploadResource = () => {
             {/* File Upload Area */}
             <div className="space-y-2 group">
                 <label className="text-[10px] font-bold text-white/20 uppercase tracking-[0.2em] ml-1 transition-colors group-focus-within:text-indigo-400">
-                    Data Payload
+                    Resource
                 </label>
                 <div className="relative">
                     <input
@@ -135,7 +135,7 @@ const UploadResource = () => {
                             )}
                         </div>
                         <span className="text-[11px] font-bold uppercase tracking-widest text-white/40">
-                            {form.file ? form.file.name : "Drop payload here or browse"}
+                            {form.file ? form.file.name : "Drop here or browse"}
                         </span>
                     </div>
                 </div>
@@ -153,7 +153,7 @@ const UploadResource = () => {
                     </div>
                 ) : (
                     <>
-                        <span>Publish to Archive</span>
+                        <span>Publish Resource</span>
                         <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>

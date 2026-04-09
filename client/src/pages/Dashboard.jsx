@@ -40,19 +40,17 @@ const Dashboard = () => {
         <div className="flex items-center gap-2 mb-4 animate-in fade-in slide-in-from-left-4 duration-700">
             <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/20">Network</span>
             <div className="w-4 h-[1px] bg-white/10" />
-            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-indigo-400">Resource Archive</span>
+            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-indigo-400">Resources</span>
         </div>
 
         {/* Header Section */}
         <header className="mb-16 flex flex-col lg:flex-row lg:items-end justify-between gap-8">
             <div className="max-w-3xl space-y-4">
                 <h1 className="text-5xl md:text-7xl font-light tracking-tighter text-white animate-in fade-in slide-in-from-bottom-4 duration-1000">
-                    NEURAL<span className="font-black text-white/40">HUB</span>
+                    Para<span className="font-black text-red-700">Docs</span>
                 </h1>
                 <p className="text-white/40 text-lg md:text-xl leading-relaxed balance animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100">
-                    Access the collective intelligence of the ParaDocs network. Browse
-                    encrypted academic assets, cross-link datasets, and initialize
-                    AI-driven semantic analysis on shared research.
+                    Our mission is to move away from cluttered, messy file sharing. We provide a clean, focused, and cinematic interface that lets you focus on what really matters
                 </p>
             </div>
 
@@ -64,16 +62,9 @@ const Dashboard = () => {
                         <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                     </div>
                     <span className="text-[11px] font-bold text-white/60 uppercase tracking-widest">
-                        {resources.length} Nodes Online
+                        {resources.length} resource
                     </span>
                 </div>
-
-                {/* Search / Filter Button Example */}
-                <button className="p-3 bg-white/[0.03] border border-white/10 rounded-2xl text-white/40 hover:text-white transition-colors">
-                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
-                    </svg>
-                </button>
             </div>
         </header>
 

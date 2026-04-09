@@ -46,8 +46,8 @@ const ChatBot = () => {
                     </svg>
                 </div>
                 <div>
-                    <h2 className="text-sm font-bold text-white tracking-tight uppercase">AI Neural Assistant</h2>
-                    <p className="text-[10px] text-white/40 font-medium uppercase tracking-widest">Protocol v2.0 Active</p>
+                    <h2 className="text-sm font-bold text-white tracking-tight uppercase">AI Assistant</h2>
+                    <p className="text-[10px] text-white/40 font-medium uppercase tracking-widest">The 1.0v</p>
                 </div>
             </div>
 
@@ -56,7 +56,7 @@ const ChatBot = () => {
                 <div className={`w-1.5 h-1.5 rounded-full ${hash ? 'bg-emerald-400 animate-pulse' : 'bg-white/20'}`} />
                 <input
                     type="text"
-                    placeholder="Resource Hash"
+                    placeholder="Hash code"
                     className="bg-transparent text-[10px] text-white/70 placeholder:text-white/20 focus:outline-none w-24"
                     value={hash}
                     onChange={(e) => setHash(e.target.value)}
@@ -75,7 +75,7 @@ const ChatBot = () => {
                     </svg>
                 </div>
                 <div className="text-center">
-                    <p className="text-white text-sm font-light tracking-widest uppercase">Awaiting Neural Link</p>
+                    <p className="text-white text-sm font-light tracking-widest uppercase">paradocs resource bot</p>
                 </div>
             </div>
         )}
@@ -113,7 +113,7 @@ const ChatBot = () => {
         <div className="flex items-end gap-3 bg-white/[0.05] border border-white/10 rounded-2xl p-2 focus-within:border-indigo-500/50 transition-colors">
             <textarea
                 rows="1"
-                placeholder="Query the document neural graph..."
+                placeholder="Ask your question.."
                 className="flex-1 bg-transparent text-sm text-white placeholder:text-white/20 focus:outline-none px-3 py-3 resize-none max-h-32"
                 value={question}
                 onChange={(e) => setQuestion(e.target.value)}
@@ -130,7 +130,7 @@ const ChatBot = () => {
             </button>
         </div>
         <div className="flex justify-between items-center px-2 mt-3">
-            <p className="text-[9px] text-white/20 font-bold uppercase tracking-[0.2em]">Paradox Intelligence Interface</p>
+            <p className="text-[9px] text-white/20 font-bold uppercase tracking-[0.2em]">Paradocs Intelligence Interface</p>
             <p className="text-[9px] text-white/20 font-bold uppercase tracking-[0.2em]">Shift + Enter for new line</p>
         </div>
     </div>

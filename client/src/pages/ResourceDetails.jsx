@@ -61,8 +61,8 @@ const ResourceDetails = () => {
             {/* Header: Title & Meta */}
             <header className="mb-10">
                 <div className="flex items-center gap-3 mb-6">
-                    <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-indigo-400">Node Verified</span>
-                    <div className="h-[1px] w-12 bg-white/10" />
+                    {/* <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-indigo-400">Node Verified</span> */}
+                    {/* <div className="h-[1px] w-12 bg-white/10" /> */}
                 </div>
 
                 <h1 className="text-4xl md:text-6xl font-light text-white tracking-tighter mb-6 leading-tight">
@@ -79,7 +79,7 @@ const ResourceDetails = () => {
             {/* Tactical Metadata Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 py-8 border-y border-white/5">
                 <div className="space-y-2">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-white/20">Hash Signature</span>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-white/20">Hash Code</span>
                     <div className="flex items-center gap-3 bg-white/[0.03] p-3 rounded-2xl border border-white/5 group">
                         <code className="text-xs text-indigo-300 font-mono truncate">
                             {resource.hashcode}
@@ -97,7 +97,7 @@ const ResourceDetails = () => {
                 </div>
 
                 <div className="space-y-2">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-white/20">Originator</span>
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-white/20">Publisher</span>
                     <div className="flex items-center gap-3 p-1">
                         <div className="w-10 h-10 rounded-full bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-xs font-black text-indigo-400">
                             {resource.user?.name?.charAt(0)}
@@ -116,7 +116,7 @@ const ResourceDetails = () => {
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
                     </svg>
-                    Endorse Node ({resource.likes.length})
+                    Like ({resource.likes.length})
                 </button>
 
                 <a
@@ -128,7 +128,7 @@ const ResourceDetails = () => {
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                     </svg>
-                    Retrieve File
+                    Download resource
                 </a>
             </div>
         </div>
@@ -164,14 +164,14 @@ const ResourceDetails = () => {
                         type="text"
                         value={comment}
                         onChange={(e) => setComment(e.target.value)}
-                        placeholder="Broadcast a signal to this node..."
+                        placeholder="You're comments about this resource.."
                         className="w-full bg-white/[0.03] border border-white/10 text-white px-6 py-5 rounded-2xl placeholder-white/10 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500/50 transition-all text-sm"
                     />
                     <button
                         onClick={handleComment}
                         className="absolute right-3 top-1/2 -translate-y-1/2 bg-white text-black px-6 py-2 rounded-xl font-black uppercase text-[9px] tracking-widest hover:bg-neutral-200 transition-all active:scale-95"
                     >
-                        Transmit
+                        Comment
                     </button>
                 </div>
             </div>

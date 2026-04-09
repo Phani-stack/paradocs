@@ -21,7 +21,7 @@ const ResourceCard = ({ resource }) => {
             <div className="flex justify-between items-start mb-6">
                 <div className="space-y-1">
                     <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-indigo-400/80 mb-2">
-                        Neural Archive
+
                     </div>
                     <h2 className="text-2xl font-light text-white group-hover:text-indigo-300 transition-colors duration-300 leading-tight tracking-tight">
                         {resource.title.split(' ').map((word, i) => (
@@ -69,7 +69,7 @@ const ResourceCard = ({ resource }) => {
             </div>
 
             <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white/20 group-hover:text-white transition-all">
-                Analyze
+                View details
                 <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
