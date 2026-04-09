@@ -22,7 +22,7 @@ const AuthLayout = ({ children, title }) => {
             {/* Branding Indicator */}
             <div className="mb-6 flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10">
                 <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 shadow-[0_0_8px_rgba(129,140,248,0.6)]" />
-                <span className="text-[9px] uppercase tracking-[0.2em] font-bold text-white/40">Secure Protocol</span>
+                <span className="text-[9px] uppercase tracking-[0.2em] font-bold text-white/40">Authentication</span>
             </div>
 
             <h2 className="text-3xl font-light tracking-tight text-white mb-3">
@@ -34,7 +34,7 @@ const AuthLayout = ({ children, title }) => {
             </h2>
 
             <p className="text-xs text-white/30 tracking-widest uppercase">
-                Paradox Knowledge Interface
+                Paradocs
             </p>
         </div>
 
