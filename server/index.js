@@ -377,6 +377,8 @@ app.post("/api/debug/reextract/:hashcode", async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => res.send("Server running"))
+
 // ===== START SERVER =====
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
