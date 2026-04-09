@@ -31,74 +31,101 @@ const Register = () => {
     };
 
     return (
-        <AuthLayout title="Join the Network">
-            <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="space-y-4">
-                    {/* Name Field */}
-                    <div className="group">
-                        <input
-                            type="text"
-                            name="name"
-                            placeholder="Full Name"
-                            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all outline-none"
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
-
-                    {/* Email Field */}
-                    <div className="group">
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="Email Address"
-                            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all outline-none"
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
-
-                    {/* Password Field */}
-                    <div className="group">
-                        <input
-                            type="password"
-                            name="password"
-                            placeholder="Create Password"
-                            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all outline-none"
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
+        <AuthLayout title="Register Neural Node">
+    <form onSubmit={handleSubmit} className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+        <div className="space-y-6">
+            {/* Identity Assignment (Name) */}
+            <div className="relative group">
+                <label className="block text-[10px] font-bold uppercase tracking-[0.2em] text-white/30 mb-2 ml-1 transition-colors group-focus-within:text-indigo-400">
+                    Full Identity
+                </label>
+                <div className="relative">
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="e.g. Julian Kane"
+                        className="w-full bg-white/[0.02] border border-white/10 rounded-2xl px-5 py-4 text-white placeholder:text-white/10 focus:outline-none focus:bg-white/[0.04] focus:border-indigo-500/50 transition-all outline-none text-sm tracking-wide"
+                        onChange={handleChange}
+                        required
+                    />
                 </div>
-
-                {/* Submit Button */}
-                <button
-                    disabled={isLoading}
-                    className="w-full relative group overflow-hidden bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold py-3 rounded-xl shadow-lg shadow-purple-900/20 transition-all active:scale-[0.98] disabled:opacity-70"
-                >
-                    <div className="relative z-10 flex items-center justify-center gap-2">
-                        {isLoading ? (
-                            <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                        ) : (
-                            "Create Account"
-                        )}
-                    </div>
-                </button>
-            </form>
-
-            {/* Footer Links */}
-            <div className="mt-8 pt-6 border-t border-white/5 text-center">
-                <p className="text-slate-400 text-sm">
-                    Already a member?{" "}
-                    <button
-                        className="text-purple-400 font-semibold hover:text-purple-300 transition-colors underline-offset-4 hover:underline"
-                        onClick={() => navigate("/login")}
-                    >
-                        Sign In
-                    </button>
-                </p>
             </div>
-        </AuthLayout>
+
+            {/* Communication Protocol (Email) */}
+            <div className="relative group">
+                <label className="block text-[10px] font-bold uppercase tracking-[0.2em] text-white/30 mb-2 ml-1 transition-colors group-focus-within:text-indigo-400">
+                    Network Interface
+                </label>
+                <div className="relative">
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="protocol@paradocs.network"
+                        className="w-full bg-white/[0.02] border border-white/10 rounded-2xl px-5 py-4 text-white placeholder:text-white/10 focus:outline-none focus:bg-white/[0.04] focus:border-indigo-500/50 transition-all outline-none text-sm tracking-wide"
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+            </div>
+
+            {/* Security Cipher (Password) */}
+            <div className="relative group">
+                <label className="block text-[10px] font-bold uppercase tracking-[0.2em] text-white/30 mb-2 ml-1 transition-colors group-focus-within:text-indigo-400">
+                    Encryption Cipher
+                </label>
+                <div className="relative">
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Create complex cipher"
+                        className="w-full bg-white/[0.02] border border-white/10 rounded-2xl px-5 py-4 text-white placeholder:text-white/10 focus:outline-none focus:bg-white/[0.04] focus:border-indigo-500/50 transition-all outline-none text-sm tracking-widest"
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+            </div>
+        </div>
+
+        {/* Primary Action */}
+        <button
+            disabled={isLoading}
+            className="w-full relative group h-14 overflow-hidden bg-white text-black font-black uppercase text-[11px] tracking-[0.3em] rounded-2xl transition-all active:scale-[0.97] disabled:opacity-30"
+        >
+            <div className="relative z-10 flex items-center justify-center gap-3">
+                {isLoading ? (
+                    <>
+                        <div className="w-4 h-4 border-2 border-black/20 border-t-black rounded-full animate-spin" />
+                        <span>Allocating...</span>
+                    </>
+                ) : (
+                    <>
+                        <span>Initialize Node</span>
+                        <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </>
+                )}
+            </div>
+            {/* Visual Sheen Effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+        </button>
+    </form>
+
+    {/* Return to Access Link */}
+    <div className="mt-10 pt-8 border-t border-white/5">
+        <div className="flex flex-col gap-4 items-center">
+            <p className="text-white/20 text-[10px] font-bold uppercase tracking-[0.2em]">
+                Existing Access Found?
+            </p>
+            <button
+                className="text-white font-bold text-xs uppercase tracking-widest hover:text-indigo-400 transition-colors py-2 px-6 bg-white/[0.03] border border-white/10 rounded-full"
+                onClick={() => navigate("/login")}
+            >
+                Authorize Link
+            </button>
+        </div>
+    </div>
+</AuthLayout>
     );
 };
 
