@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://paradocs.onrender.com/api",
+  // baseURL: "https://paradocs.onrender.com/api",
+  baseURL: "http://localhost:8000/api",
 });
 
 // Auth

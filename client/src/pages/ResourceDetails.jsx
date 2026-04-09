@@ -107,7 +107,7 @@ const ResourceDetails = () => {
                         </button>
 
                         <a
-                            href={`http://localhost:8000/${resource.fileUrl}`}
+                            href={`https://paradocs.onrender.com/${resource.fileUrl}`}
                             target="_blank"
                             rel="noreferrer"
                             className="flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white px-5 py-2 rounded-xl font-semibold transition-transform active:scale-95"

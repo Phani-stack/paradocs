@@ -155,6 +155,48 @@ app.post("/api/login", async (req, res) => {
   }
 });
 
+// AUTH: Register
+app.post("/api/register", async (req, res) => {
+  try {
+    const { name, email, password } = req.body;
+
+    // Validate input
+    if (!name || !email || !password) {
+      return res.status(400).json("Name, email, and password are required");
+    }
+
+    // Check if user already exists
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return res.status(400).json("User with this email already exists");
+    }
+
+    // Hash password
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+
+    // Create user
+    const newUser = await User.create({
+      name,
+      email,
+      password: hashedPassword
+    });
+
+    // Generate JWT token
+    const token = jwt.sign({ id: newUser._id }, process.env.JWT_SECRET);
+
+    // Return response
+    res.json({
+      token,
+      user: { name: newUser.name, email: newUser.email }
+    });
+
+  } catch (err) {
+    console.error("REGISTER ERROR:", err);
+    res.status(500).json(err.message);
+  }
+});
+
 // RESOURCE: Upload
 app.post("/api/resource/upload", auth, upload.single("file"), async (req, res) => {
   try {
