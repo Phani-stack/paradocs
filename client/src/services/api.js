@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://paradocs.onrender.com",
+  baseURL: "https://paradocs.onrender.com/api",
 });
 
 // Auth
